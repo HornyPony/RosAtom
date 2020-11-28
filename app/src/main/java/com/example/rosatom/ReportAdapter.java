@@ -13,9 +13,9 @@ import com.example.rosatom.databinding.InformationReportItemBinding;
 import java.util.List;
 
 class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder> {
-    private List<Report> reportList;
+    private List<InformationReport> reportList;
 
-    ReportAdapter(List<Report> reportList){
+    ReportAdapter(List<InformationReport> reportList){
         this.reportList = reportList;
     }
 
@@ -29,7 +29,7 @@ class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ReportAdapter.ViewHolder holder, int position) {
-        Report report = reportList.get(position);
+        InformationReport report = reportList.get(position);
         holder.headerTV.setText(report.getHeader());
         holder.dateTV.setText(report.getDate());
         holder.jobTV.setText(report.getJob());

@@ -1,13 +1,13 @@
 package com.example.rosatom;
 
-class Report {
+class InformationReport {
     private String header;
     private String date;
     private String job;
     private String recipient;
     private String reportText;
 
-    public Report(String header, String date, String job, String recipient, String reportText) {
+    public InformationReport(String header, String date, String job, String recipient, String reportText) {
         this.header = header;
         this.date = date;
         this.job = job;
