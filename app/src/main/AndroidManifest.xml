@@ -9,16 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tasks.SortingTasksActivity"></activity>
-        <activity android:name=".Tasks.FilterTasksActivity" />
-        <activity android:name=".Tasks.TasksActivity">
+        <activity android:name=".CheckTask.CheckTaskActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".InformationReportActivity" />
+        <activity android:name=".Tasks.SortingTasksActivity" />
+        <activity android:name=".Tasks.FilterTasksActivity" />
+        <activity android:name=".Tasks.TasksActivity">
+
+        </activity>
+        <activity android:name=".InformationReportActivity">
+
+        </activity>
         <activity android:name=".MainActivity" />
     </application>
 
