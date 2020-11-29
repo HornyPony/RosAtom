@@ -1,12 +1,17 @@
 package com.example.rosatom.Tasks;
 
-class Task {
+import java.io.Serializable;
+import java.util.Comparator;
+
+class Task implements Serializable  {
     private String task;
     private String subordination;
     private String priority;
     private String period;
     private String typeOfWork;
     private String gaveTime;
+
+    private int priorityType;
 
     public String getTypeOfWork() {
         return typeOfWork;
@@ -32,7 +37,13 @@ class Task {
         this.gaveTime = gaveTime;
         this.period = period;
 
-
+        if (priority.equals("Высокий")){
+            priorityType = 2;
+        } else  if(priority.equals(("Средний"))){
+            priorityType = 1;
+        } else  if (priority.equals("Не срочно")){
+            priorityType = 0;
+        }
     }
 
     public String getTask() {
@@ -66,4 +77,14 @@ class Task {
     public void setPeriod(String period) {
         this.period = period;
     }
+
+    public int getPriorityType() {
+        return priorityType;
+    }
+
+    public void setPriorityType(int priorityType) {
+        this.priorityType = priorityType;
+    }
+
+
 }
